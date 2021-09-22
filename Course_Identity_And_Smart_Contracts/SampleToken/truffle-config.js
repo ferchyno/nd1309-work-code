@@ -19,10 +19,11 @@
  */
 
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const infuraKey = "<Infura ProjectID>";
-//
-// const fs = require('fs');
-const mnemonic = "<METAMASK SEED>";
+const infuraKey = "f85ca96666304af18d77aa32afaf5293";
+
+// const mnemonic = "<METAMASK SEED>";
+const fs = require('fs');
+const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
 
@@ -64,4 +65,4 @@ module.exports = {
       // }
     }
   }
-}
+};
